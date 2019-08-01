@@ -112,7 +112,7 @@ export default function () {
             var durationMs  = endTime - this.startTime;
             var durationStr = this.moment.duration(durationMs).format('h[h] mm[m] ss[s]');
             var footer      = passed === this.testCount ?
-                              this.chalk.bold.green(`${this.testCount} passed`) :
+                              this.chalk.bold.green(`${this.testCount}/${this.testCount} passed`) :
                               this.chalk.bold.red(`${this.testCount - passed}/${this.testCount} failed`);
 
             footer += this.chalk.grey(` (${durationStr})`);
